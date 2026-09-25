@@ -1,0 +1,8 @@
+{
+  "app_name": "sample-project",
+  "version": "0.2.0",
+  "features": {
+    "auth": true,
+    "caching": false
+  }
+}

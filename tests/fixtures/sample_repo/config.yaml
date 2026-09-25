@@ -1,0 +1,8 @@
+app:
+  name: sample-project
+  debug: true
+  port: 8080
+
+database:
+  url: sqlite:///app.db
+  pool_size: 5
