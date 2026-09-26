@@ -311,6 +311,30 @@ codebase-agent verify tests/fixtures/sandbox_test_repo --finding PAT-003_7fffc35
 
 ---
 
+## Streamlit Web UI (Phase 8.1 Stretch Goal)
+
+In addition to the CLI, the agent includes an interactive browser-based dashboard for visual exploration and safe refactoring:
+
+```bash
+# Install optional web dependencies
+pip install -r requirements-web.txt
+# or: pip install ".[web]"
+
+# Launch the Streamlit dashboard
+streamlit run web/app.py
+```
+
+### Dashboard Features
+- **Repository Overview:** File metrics, line counts, classification breakdown, and detected languages.
+- **CodeGraph Explorer:** Inter-module relationship breakdown, dependency hotspots, and circular dependency checks.
+- **Ask the Codebase:** Grounded natural-language Q&A with validated file:line source citations.
+- **Findings Inspector:** Interactive filtering of security vulnerabilities, code smells, and anti-patterns.
+- **Refactoring & Diffs:** Syntax-highlighted unified diff previews with strict safety tier classifications.
+- **Approval-Gated Sandbox:** Requires explicit checkbox confirmation before applying changes to an isolated temporary sandbox.
+- **Verification Engine:** Multi-tool verification auditing unit tests, AST linter syntax rules, and verifying byte-for-byte repository immutability.
+
+---
+
 ## Asking Questions (`ask`)
 
 Ask natural-language questions about an analyzed codebase:
