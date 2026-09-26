@@ -324,14 +324,19 @@ pip install -r requirements-web.txt
 streamlit run web/app.py
 ```
 
-### Dashboard Features
-- **Repository Overview:** File metrics, line counts, classification breakdown, and detected languages.
-- **CodeGraph Explorer:** Inter-module relationship breakdown, dependency hotspots, and circular dependency checks.
-- **Ask the Codebase:** Grounded natural-language Q&A with validated file:line source citations.
-- **Findings Inspector:** Interactive filtering of security vulnerabilities, code smells, and anti-patterns.
-- **Refactoring & Diffs:** Syntax-highlighted unified diff previews with strict safety tier classifications.
-- **Approval-Gated Sandbox:** Requires explicit checkbox confirmation before applying changes to an isolated temporary sandbox.
-- **Verification Engine:** Multi-tool verification auditing unit tests, AST linter syntax rules, and verifying byte-for-byte repository immutability.
+### Unified 11-Page Architecture
+The web application provides a complete visual interface across 11 dedicated pages:
+1. **📊 Dashboard:** Project-wide health overview, high-level metrics, and phase execution pipeline status.
+2. **📁 Repository & Ingestion:** File tree, language breakdown, metadata statistics, and interactive file content viewer.
+3. **🧠 Code Understanding:** In-depth AST construct exploration (classes, methods, functions, imports, invocations).
+4. **🕸️ Architecture & Graph:** CodeGraph relationship traversal, dependency hotspots, and circular dependency detection.
+5. **💬 Codebase Q&A:** Grounded natural-language architectural Q&A with validated file:line source citations.
+6. **🔍 Findings & Security:** Filterable security vulnerabilities, code smells, and anti-patterns with verbatim evidence code.
+7. **🛠️ Refactoring & Diffs:** Actionable refactoring proposals, safety tier filtering, and syntax-highlighted unified diffs.
+8. **🧪 Sandbox Apply:** Strict approval-gated sandbox patch execution with baseline/post-patch test regression comparison.
+9. **📋 Verification Engine:** Standalone multi-check verification auditing unit tests, AST linter syntax rules, and finding resolution.
+10. **📑 Reports & Exports:** Centralized export center for downloading structured JSON reports and diff `.patch` files.
+11. **🛡️ Safety & Settings:** Real-time SHA-256 immutability monitoring, safety invariant verification, and LLM configuration.
 
 ---
 
